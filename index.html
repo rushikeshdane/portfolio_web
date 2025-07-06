@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,6 +28,8 @@
       color:var(--text-primary);
       background:var(--bg-light);
       line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
 
     header{
@@ -128,70 +131,108 @@
     .contact-line p{margin:.25rem 0;}
     .footer-note{font-size:.9rem;margin-top:1.25rem;}
 
-    /* Responsive Enhancements */
+    /* Responsive Enhancements (<=900 px) */
     @media(max-width: 900px) {
-  .nav-container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    overflow-x: auto;
-  }
+      .nav-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        overflow-x: auto;
+      }
 
-  nav.nav-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.75rem;
-    padding-top: 0;
-    white-space: nowrap;
-  }
+      nav.nav-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        padding-top: 0;
+        white-space: nowrap;
+      }
 
-  nav.nav-links a {
-    font-size: 0.95rem;
-    margin-left: 0;
-    padding: 0.25rem 0.5rem;
-  }
+      nav.nav-links a {
+        font-size: 0.95rem;
+        margin-left: 0;
+        padding: 0.25rem 0.5rem;
+      }
 
-  .logo {
-    height: 50px;
-  }
+      .logo {
+        height: 50px;
+      }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+      .hero h1 {
+        font-size: 2rem;
+      }
 
-  .hero p {
-    font-size: 1rem;
-  }
+      .hero p {
+        font-size: 1rem;
+      }
 
-  .about-wrapper {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-  }
+      .about-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
 
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-  }
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
 
-  .project-card img {
-    height: 160px;
-  }
+      .project-card img {
+        height: 160px;
+      }
 
-  .socials {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+      .socials {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
 
-  .card-links a {
-    padding: 0.4rem 0.65rem;
-    font-size: 0.8rem;
-  }
-}
+      .card-links a {
+        padding: 0.4rem 0.65rem;
+        font-size: 0.8rem;
+      }
+    }
 
+    /* ⇩ NEW mobile‑specific fixes (<=768 px) — ONLY addition */
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 1rem;
+      }
+
+      .about-wrapper img {
+        width: 90%;
+        max-width: 360px;
+        height: auto;
+      }
+
+      .bio {
+        min-width: unset;
+        padding: 0 1rem;
+      }
+
+      .bio h2 {
+        font-size: 1.75rem;
+      }
+
+      .bio p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      footer h2 {
+        font-size: 1.5rem;
+      }
+
+      .contact-line p {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -215,14 +256,10 @@
     <p>Glad you dropped by! This <span class="highlight">collection</span> highlights my work in data‑science  &amp; data analytics.</p>
     <br>
     <hr style="border: none; height: 2px; background-color: #FFDAB9; width: 80%; margin: 20px auto;">
-    
   </section>
 
   <!-- ─── PORTFOLIO ──────────────────────────────────── -->
   <section id="portfolio">
-    
-    
-    
     <div class="grid">
 
       <!-- Card 1 -->
@@ -258,7 +295,6 @@
           <p>machine learning forcasting application with financial analytics.</p>
           <div class="card-links">
             <a href="https://github.com/rushikeshdane/Stock_Market_Prediction_and_analysis" target="_blank">GitHub</a>
-            
           </div>
         </div>
       </div>
@@ -294,10 +330,8 @@
         <img src="assets/images/ploty.png" alt="Data viz book summary">
         <div class="info">
           <h3>Plotly Tutorial:How to make plotly visuals better?</h3>
-          
           <div class="card-links">
             <a href="https://www.kaggle.com/code/rushikeshdane20/plotly-tutorial-how-to-make-plotly-visuals-better" target="_blank">View</a>
-            
           </div>
         </div>
       </div>
@@ -334,12 +368,10 @@
       <a href="https://github.com/rushikeshdane" target="_blank">
         <img src="assets/icons/github-sign.png" alt="GitHub">
       </a>
-
     </div>
 
     <div class="contact-line">
       <p>Email: datarushikesh20@gmail.com</p>
-      
     </div>
 
     <p class="footer-note">© 2025 Rushikesh Dane. Crafted with <span style="font-size:1.1em;">♥</span> </p>
