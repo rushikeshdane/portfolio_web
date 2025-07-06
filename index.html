@@ -1,4 +1,4 @@
-<<html lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -130,73 +130,68 @@
 
     /* Responsive Enhancements */
     @media(max-width: 900px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .nav-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    overflow-x: auto;
+  }
 
-      nav.nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        padding-top: 0.5rem;
-      }
+  nav.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    padding-top: 0;
+    white-space: nowrap;
+  }
 
-      nav.nav-links a {
-        margin-left: 0;
-        font-size: 1rem;
-      }
+  nav.nav-links a {
+    font-size: 0.95rem;
+    margin-left: 0;
+    padding: 0.25rem 0.5rem;
+  }
 
-      .about-wrapper {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-      }
+  .logo {
+    height: 50px;
+  }
 
-      .about-wrapper img {
-        width: 100%;
-        max-width: 100%;
-      }
+  .hero h1 {
+    font-size: 2rem;
+  }
 
-      .bio {
-        min-width: unset;
-      }
+  .hero p {
+    font-size: 1rem;
+  }
 
-      .grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.25rem;
-      }
+  .about-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
 
-      .project-card img {
-        height: 160px;
-      }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
 
-      .hero h1 {
-        font-size: 2rem;
-      }
+  .project-card img {
+    height: 160px;
+  }
 
-      .hero p {
-        font-size: 1rem;
-      }
+  .socials {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-      footer {
-        padding: 2rem 1rem;
-      }
+  .card-links a {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8rem;
+  }
+}
 
-      .contact-line p {
-        font-size: 0.95rem;
-      }
-
-      .socials {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .card-links a {
-        padding: 0.4rem 0.65rem;
-        font-size: 0.8rem;
-      }
-    }
   </style>
 </head>
 <body>
